@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS product_db;
+USE product_db;
+
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  buying_price DECIMAL(10,2) NOT NULL,
+  selling_price DECIMAL(10,2) NOT NULL,
+  display ENUM('Yes','No') NOT NULL DEFAULT 'No'
+);
